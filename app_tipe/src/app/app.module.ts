@@ -1,3 +1,4 @@
+import { MapPage } from './../pages/map/map';
 import { AdressesService } from './services/adresses.service';
 import { NouveauPage } from './../pages/nouveau/nouveau';
 import { NgModule, ErrorHandler } from '@angular/core';
@@ -5,6 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { TabsPage } from '../pages/tabs/tabs';
+import { HTTP } from '@ionic-native/http';
 
 
 import { HttpClientModule } from '@angular/common/http'
@@ -44,7 +46,8 @@ export class MyErrorHandler implements ErrorHandler {
     MyApp,
     NouveauPage,
     HistoriquePage,
-    TabsPage
+    TabsPage,
+    MapPage
   ],
   imports: [
     BrowserModule,
@@ -56,11 +59,13 @@ export class MyErrorHandler implements ErrorHandler {
     MyApp,
     NouveauPage,
     HistoriquePage,
-    TabsPage
+    TabsPage,
+    MapPage
   ],
   providers: [
     StatusBar,
     AdressesService,
+    HTTP,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

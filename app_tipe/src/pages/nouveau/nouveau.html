@@ -61,6 +61,8 @@
             <ion-item-group *ngFor='let e of resultat; let i = index'>
                 <ion-item-divider color="light"> étape : {{i+1}} </ion-item-divider>
                 <ion-item *ngFor='let t of e'> {{ t.surnom }}</ion-item>
+                <button (click)='montrerCarte(i)' ion-button block clear color='dark'>
+                    <ion-icon style="padding: right 10px;" name='map'></ion-icon> Afficher sur la carte </button>
             </ion-item-group>
         </div>
         <br>
@@ -70,7 +72,12 @@
         </div>
         <br>
         <hr>
-        <button strong ion-button block (click)='nouveau() '>Nouvelle recherhce</button>
+        <button strong ion-button block (click)='nouveau() '>Nouvelle recherche</button>
     </div>
+
+    <p> {{teste}} </p>
+
+
+
 
 </ion-content>

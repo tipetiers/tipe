@@ -27,7 +27,7 @@ export class AdressesService {
         },
         {
             surnom: "lazar",
-            adresse:'lycée des lazaristes',
+            adresse:'lycée des lazaristes, Lyon, France',
             volume: 12 
         }
         

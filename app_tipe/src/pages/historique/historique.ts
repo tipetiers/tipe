@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 
 /**
  * Generated class for the HistoriquePage page.
@@ -8,6 +8,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
  * Ionic pages and navigation.
  */
 
+declare var google: any;
+
 @IonicPage()
 @Component({
   selector: 'page-historique',
@@ -15,11 +17,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class HistoriquePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public platform: Platform) {
+    
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HistoriquePage');
-  }
+ 
 
 }
